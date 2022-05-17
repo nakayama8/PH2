@@ -1,0 +1,16 @@
+DROP DATABASE IF EXISTS bbs;
+
+CREATE DATABASE bbs DEFAULT CHARACTER SET utf8;
+
+USE bbs;
+
+DROP TABLE IF EXISTS posts;
+
+CREATE TABLE posts(
+    id int(11) NOT NULL AUTO_INCREMENT,
+    name varchar(255) DEFAULT NULL,
+    comment varchar(255) DEFAULT NULL,
+    
+    created_at datetime DEFAULT NULL,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
